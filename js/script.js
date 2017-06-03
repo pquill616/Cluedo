@@ -36,9 +36,8 @@ function checkItem() {
 		});
 	}
 }
-window.onload = function() {
 	chooseCharacter();
+window.onload = function() {
 	titleReset();
-	checkItem();
 	checkItem();
 }
