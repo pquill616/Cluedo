@@ -1,10 +1,12 @@
 var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+var footer = document.querySelector('body footer');
 
 function chooseCharacter(){
 	var character = document.querySelectorAll(".chooseCharacter span");
 	for(i of character){
 		i.addEventListener(touchEvent, function(){
 			changeDisplay(this.id);
+			footer.innerHTML = "Mukodok!!";
 		});
 	}
 }
