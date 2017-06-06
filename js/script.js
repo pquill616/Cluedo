@@ -1,4 +1,4 @@
-var touchEvent = 'click';
+var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 var footer = document.querySelector('body footer');
 
 function chooseCharacter(){
