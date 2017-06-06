@@ -5,8 +5,8 @@ function chooseCharacter(){
 	var character = document.querySelectorAll(".chooseCharacter span");
 	for(i of character){
 		i.addEventListener(touchEvent, function(){
-			changeDisplay(this.id);
 			footer.innerHTML = "Mukodok!!";
+			changeDisplay(this.id);
 		});
 	}
 }
@@ -38,7 +38,7 @@ function checkItem() {
 		});
 	}
 }
-	chooseCharacter();
+chooseCharacter();
 window.onload = function() {
 	titleReset();
 	checkItem();
