@@ -61,6 +61,9 @@ h1 {
 #scarlett {	background: red;}
 #white {	background: white;}
 
+.chooseCharacter span {
+	cursor: pointer;
+}
 table {
 	border-collapse: collapse;
 	width: 100%;    
