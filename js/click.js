@@ -1,11 +1,11 @@
-var main = document.querySelector('body main');
-main.innerHTML = '';
-
 var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-main.innerHTML += touchEvent + '\n';
 
-touchEvent = 'ontouchstart' in document ? 'touchstart' : 'click';
-main.innerHTML += touchEvent + '\n';
-
-var touchEvent = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
-main.innerHTML += touchEvent + '\n';
+function chooseCharacter(){
+	var character = document.querySelectorAll(".chooseCharacter span");
+	for(i of character){
+		i.addEventListener(touchEvent, function(){
+			console.log("OK");
+		});
+	}
+}
+chooseCharacter();
