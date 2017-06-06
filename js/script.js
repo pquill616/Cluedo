@@ -42,6 +42,7 @@ function checkItem() {
 	}
 }
 chooseCharacter();
+TEST();
 window.onload = function() {
 	titleReset();
 	checkItem();
