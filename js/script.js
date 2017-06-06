@@ -1,6 +1,10 @@
 var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 var footer = document.querySelector('body footer');
 
+function TEST() {
+	document.querySelector("footer").innerHTML = 'ontouchstart' in window + '\n';
+}
+
 function chooseCharacter(){
 	var character = document.querySelectorAll(".chooseCharacter span");
 	for(i of character){
