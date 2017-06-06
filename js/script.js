@@ -2,7 +2,7 @@ var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 var footer = document.querySelector('body footer');
 
 function TEST() {
-	document.querySelector("footer").innerHTML = 'ontouchstart' in window + '\n';
+	document.querySelector("footer").innerHTML = 'ontouchstart' in window;
 }
 
 function chooseCharacter(){
