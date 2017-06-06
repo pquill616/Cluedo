@@ -92,3 +92,6 @@ table tbody td.active:last-child {
 table tbody td:last-child {
 	background: #ddd;
 }
+table tbody td:last-child {
+	cursor: pointer;
+}
