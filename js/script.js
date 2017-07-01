@@ -1,9 +1,5 @@
-var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-var footer = document.querySelector('body footer');
-
-function TEST() {
-	document.querySelector("footer").innerHTML = "<p>" + window.touchEvent + "</p>";
-}
+/*var touchEvent = 'ontouchstart' in window ? 'touchend' : 'click';*/
+var touchEvent = 'onclick' in window ? 'click' : 'touchstart';
 
 function chooseCharacter(){
 	var character = document.querySelectorAll(".chooseCharacter span");
@@ -41,9 +37,9 @@ function checkItem() {
 		});
 	}
 }
-chooseCharacter();
-TEST();
 window.onload = function() {
+	chooseCharacter();
 	titleReset();
 	checkItem();
+	//checkItem();
 }
