@@ -1,10 +1,11 @@
-/*var touchEvent = 'ontouchstart' in window ? 'touchend' : 'click';*/
-var touchEvent = 'onclick' in window ? 'click' : 'touchstart';
+var touchEvent = 'click';
+var footer = document.querySelector('body footer');
 
 function chooseCharacter(){
 	var character = document.querySelectorAll(".chooseCharacter span");
 	for(i of character){
 		i.addEventListener(touchEvent, function(){
+			footer.innerHTML = "Mukodok!!";
 			changeDisplay(this.id);
 		});
 	}
@@ -17,7 +18,9 @@ function changeDisplay(id) {
 function titleReset() {
 	var title = document.querySelector(".titleReset");
 	title.addEventListener(touchEvent, function(){
-		location.reload();
+		document.querySelector(".display.active").classList.remove("active");
+		document.querySelector(".display.chooseCharacter").classList.add("active");
+		document.querySelector(".display.gamePaper").id = ("");
 	});
 }
 function checkItem() {
@@ -37,9 +40,8 @@ function checkItem() {
 		});
 	}
 }
+chooseCharacter();
 window.onload = function() {
-	chooseCharacter();
 	titleReset();
 	checkItem();
-	//checkItem();
 }
